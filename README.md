@@ -11,3 +11,5 @@ Functionalities: This is the platform to cater to digital recruitment for the ca
                 - Uploading CVs and Recent Photo
                 - Gamification of Common Interview Questions
                 - Integrated Submission of Video Interview
+                
+The online version is on this link: https://d11r4drob8odnz.cloudfront.net/
