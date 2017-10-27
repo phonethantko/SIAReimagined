@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Hire Me!</title>
+        <!-- CSS Files -->
+        <link rel="stylesheet" href="css/main.css" />
+        <script src="js/second-round.js"></script>
+        <script>
+        function show(shown, hidden) {
+          document.getElementById(shown).style.display='block';
+          document.getElementById(hidden).style.display='none';
+          return false;
+        }
+        </script>
+        <script type= "text/javascript" src= "https://api.clipchamp.com/6EhCk5T3meycn3ayUSN0HZ-NNuw/button.js">
+        </script>
+
+
+    </head>
+
+    <body>
+        <header class="main-header">
+            <div class="main-header__content">
+                <a class="main-header__logo" href="index.html"></a>
+                <nav class="top-nav">
+                    <p>Welcome to Our Applicant Portal</p>
+                    <a href="login.html" class="top-nav__login" >Log Out</a>
+                </nav>
+            </div>
+        </header>
+
+        <div class="userhome-container">
+            <div id="video-intro">
+                <div>
+                    <h2>Video Submission</h2>
+                    <p>In the following step, you will need to upload a recording of yourself answering to the questions we direct at you.</p>
+
+                </div>
+                <a href="#" class="blue-orange-button" onclick="return show('video-page','video-intro');">Let's Begin!</a>
+            </div>
+
+            <div id="video-page" style="display:none">
+                <div id="video-box">
+                    <h3>Things to Take Note!</h3>
+                    <p>This is the chance for you to shine! During this video interview, you are required to answer the questions given to you.</p>
+                    <p>You will be given 2 minutes to answer each question.</p>
+                    <p>Tips: Utilize the time properly</p>.
+                    <button class="blue-orange-button" id="launch-clipchamp">Record</button>
+                    <script type="text/javascript">
+                        var playerDiv = document.createElement('div');
+                        document.body.appendChild(playerDiv);
+
+                        var process = clipchamp({
+                          output: 'gdrive',
+                          gdrive: 'user',//File Naming Configure here
+                          style: {
+                            url: "https://api.test.clipchamp.com/static/button/themes/modern-light.css"
+                          },
+                          inputs: ['camera'],
+                          enable: ['no-user-retry', 'no-thank-you', 'no-branding'],
+                          camera: {
+                            limit: 600,
+                            teleprompter: {
+                              subtitles: {
+                                0: {
+                                  text: 'Tell me about yourself'
+                                },
+                                120: {
+                                  text: 'How do you handle stress and pressure?'
+                                },
+                                  240:{
+                                      text: 'What are your goals for the future?'
+                                  },
+                                  360:{
+                                      text: 'Describe why you are the right fit for SIA and how SIA adds value to you?'
+                                  },
+                                  480:{
+                                      text: 'What qualities do you think a good cabin crew member should have?'
+                                  }
+                              }
+                            }
+                          },
+                          onUploadComplete: function(data) {
+                            playerDiv.innerHTML = data.embedHtml;
+                            //To check whether this works or not!
+                          },
+                          title: 'Singapore Airlines',
+                          onPreviewAvailable: function(blob) {
+                            playerDiv.innerHTML = '<img src="' + URL.createObjectURL(blob) + '" alt="Preview Image">';
+                          },
+                          localization: {
+                            strings: {
+                              task_upload: 'Submitting',
+                              webcam_rec_finish: 'Finish and Submit'
+                            }
+                          }
+                        });
+
+                        document.getElementById('launch-clipchamp').onclick = function() {
+                          process.open().then(function(remote) {
+                            remote.areRecordingDevicesReady().then(function() {
+                              // This launches the recording as soon as the
+                              // webcam can be accessed.
+                              remote.startRecording();
+                            }).catch(function() {
+                              alert('You webcam is not ready or you failed to grant us access to your webcam!');
+                            });
+                          });
+                        };
+                    </script>
+                </div>
+
+                <br><br>
+                <a href="#" class="blue-orange-button" onclick="return show('video-intro','video-page');">Return</a>
+                <a href="confirmation.html" class="blue-orange-button">Confirm</a>
+            </div>
+        </div>
+    </body>
+</html>
