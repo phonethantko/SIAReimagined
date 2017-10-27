@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Hire Me!</title>
+        <!-- CSS Files -->
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+
+    <body>
+        <header class="main-header">
+            <div class="main-header__content">
+                <a class="main-header__logo" href="index.html"></a>
+                <nav class="top-nav">
+                    <p>Already have an account?</p>
+                    <a href="login.html" class="top-nav__login" >Log In</a>
+                </nav>
+            </div>
+        </header>
+
+        <div class="signup-container">
+            <div class="main-text">
+                <p class="big">Sign Up</p>
+            </div>
+
+            <form id="submission-form">
+                <div class="form-group">
+                    <label for="firstName">First Name *</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Enter your First Name">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name *</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Enter your Last Name">
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail">Email *</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Enter your Email Address">
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword">Password *</label>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="checkPassword">Re-Enter Password *</label>
+                    <input type="password" class="form-control" id="checkPassword" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="blue-orange-button" onclick="validateForm()">Sign Up!</button>
+                </div>
+            </form>
+        </div>
+
+        
+        <script src="js/signup.js"></script>
+    </body>
+</html>
