@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Hire Me!</title>
+        <!-- CSS Files -->
+        <link rel="stylesheet" href="css/main.css" />
+        <script src="js/signup.js"></script>
+        <script>
+        function show(shown, hidden) {
+          document.getElementById(shown).style.display='block';
+          document.getElementById(hidden).style.display='none';
+          return false;
+        }
+        </script>
+    </head>
+
+    <body>
+        <header class="main-header">
+            <div class="main-header__content">
+                <a class="main-header__logo" href="index.html"></a>
+                <nav class="top-nav">
+                    <p>Welcome to Our Applicant Portal</p>
+                    <a href="login.html" class="top-nav__login" >Log Out</a>
+                </nav>
+            </div>
+        </header>
+
+        <div class="userhome-container">
+            <div id="game-intro">
+                <div>
+                    <h2>Short Assessment Part</h2>
+                    <p>Please complete the following questions:</p>
+
+                </div>
+                <a href="#" class="blue-orange-button" onclick="return show('game-page','game-intro');">Let's Begin!</a>
+            </div>
+
+            <div id="game-page" style="display:none">
+                <div id="quiz-box">
+                    <h2>Quiz</h2>
+
+                    <hr>
+
+                    <p id="question"></p>
+
+                    <div class="buttons">
+                        <button id="btn0"><span id="choice0"></span></button>
+                        <button id="btn1"><span id="choice1"></span></button>
+                        <button id="btn2"><span id="choice2"></span></button>
+                        <button id="btn3"><span id="choice3"></span></button>
+                    </div>
+
+                    <hr>
+
+                    <footer>
+                        <p id="progress">Question x of y.</p>
+                    </footer>
+                </div>
+                <br><br>
+                <a href="#" class="blue-orange-button" onclick="return show('game-intro','game-page');">Return</a>
+            </div>
+
+
+        </div>
+        <script src="js/quiz-handler.js"></script>
+        <script src ="js/data-handler.js"></script>
+        <script src="js/quiz-app.js"></script>
+
+    </body>
+</html>
