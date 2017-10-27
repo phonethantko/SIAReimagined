@@ -1,7 +1,13 @@
 Team: Techsketeers
 
-Project Name: 
+Project Name: SIA Reimagined
 
-Business Challenge: 
+Business Challenge: Cabin Crew Digital Recruitment
 
-Functionalities: 
+Functionalities: This is the platform to cater to digital recruitment for the cabin creww. 
+
+                The steps involve:
+                - Filling the Online Form
+                - Uploading CVs and Recent Photo
+                - Gamification of Common Interview Questions
+                - Integrated Submission of Video Interview
