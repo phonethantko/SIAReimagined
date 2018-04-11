@@ -1,3 +1,7 @@
+# SIA Reimagined
+
+## Info
+
 Team: Techsketeers
 
 Project Name: SIA Reimagined
@@ -11,5 +15,11 @@ Functionalities: This is the platform to cater to digital recruitment for the ca
                 - Uploading CVs and Recent Photo
                 - Gamification of Common Interview Questions
                 - Integrated Submission of Video Interview
-                
-The online version is on this link: https://d11r4drob8odnz.cloudfront.net/
+
+## Disclaimer
+
+Currently the platform is not yet that polished nor completed, although we still have some ideas in mind. 
+Improvement might be done in the future.
+
+## Screenshots
+
